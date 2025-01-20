@@ -1,11 +1,15 @@
 // Import the 'express' module
 import express from 'express';
+import dotenv from 'dotenv';
+
+//For env File 
+dotenv.config();
 
 // Create an Express application
 const app = express();
 
 // Set the port number for the server
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Define a route for the root path ('/')
 app.get('/api', (req, res) => {
